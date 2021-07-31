@@ -2,6 +2,7 @@ package com.elvitalya.drillershandbook
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.elvitalya.drillershandbook.databinding.ActivityMainBinding
@@ -21,9 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        APP_ACTIVITY = this
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        APP_ACTIVITY = this
+
         nav_controller = Navigation.findNavController(this, R.id.nav_host_fragment)
 
     }
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 Thread.sleep(3000)
             }
             Dispatchers.Main{
-                nav_controller.navigate(R.id.action_startFragment_to_mainFragment)
+                binding.startImage.visibility = View.GONE
             }
         }
     }

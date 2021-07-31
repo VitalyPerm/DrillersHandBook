@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.davemorrissey.labs.subscaleview.ImageSource
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.elvitalya.drillershandbook.databinding.FragmentTheme1Binding
 import com.elvitalya.drillershandbook.utils.THEME_NUMBER
 
@@ -25,7 +27,9 @@ class Theme1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         when(THEME_NUMBER){
-            0 -> binding.contentImageView.setImageResource(R.drawable.theme1_content)
+            0 -> {
+                binding.contentImageView.setImageResource(R.drawable.theme_1_content)
+            }
         }
 
     }
