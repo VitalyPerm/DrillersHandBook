@@ -19,10 +19,6 @@ class StartFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_start, container, false)
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
 
 
 }

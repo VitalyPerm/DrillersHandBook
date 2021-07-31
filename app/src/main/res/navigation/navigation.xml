@@ -18,5 +18,18 @@
         android:id="@+id/mainFragment"
         android:name="com.elvitalya.drillershandbook.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_theme1Fragment"
+            app:destination="@id/theme1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/theme1Fragment"
+        android:name="com.elvitalya.drillershandbook.Theme1Fragment"
+        android:label="fragment_theme1"
+        tools:layout="@layout/fragment_theme1" >
+        <action
+            android:id="@+id/action_theme1Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
