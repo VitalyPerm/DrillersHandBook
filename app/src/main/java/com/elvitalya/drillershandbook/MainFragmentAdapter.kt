@@ -43,8 +43,14 @@ class MainFragmentAdapter : RecyclerView.Adapter<MainFragmentAdapter.MainFragmen
                 0 -> {
                     THEME_NUMBER = 0
                     APP_ACTIVITY.nav_controller.navigate(R.id.action_mainFragment_to_theme1Fragment)
-
-
+                }
+                1 ->{
+                    THEME_NUMBER = 1
+                    APP_ACTIVITY.nav_controller.navigate(R.id.action_mainFragment_to_theme1Fragment)
+                }
+                2 ->{
+                    THEME_NUMBER = 2
+                    APP_ACTIVITY.nav_controller.navigate(R.id.action_mainFragment_to_theme1Fragment)
                 }
             }
         }

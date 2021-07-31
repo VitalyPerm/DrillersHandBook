@@ -4,22 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import com.davemorrissey.labs.subscaleview.ImageSource
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-import com.elvitalya.drillershandbook.databinding.FragmentTheme1Binding
+import com.elvitalya.drillershandbook.databinding.FragmentThemeBinding
 import com.elvitalya.drillershandbook.utils.THEME_NUMBER
 
 
-class Theme1Fragment : Fragment() {
-    lateinit var binding: FragmentTheme1Binding
+class ThemeFragment : Fragment() {
+    lateinit var binding: FragmentThemeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       binding = FragmentTheme1Binding.inflate(layoutInflater, container, false)
+       binding = FragmentThemeBinding.inflate(layoutInflater, container, false)
         return binding.root
 
     }
@@ -28,8 +25,15 @@ class Theme1Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         when(THEME_NUMBER){
             0 -> {
+                binding.contentImageView.setImageResource(R.drawable.about_content)
+            }
+            1 -> {
                 binding.contentImageView.setImageResource(R.drawable.theme_1_content)
             }
+            2 -> {
+                binding.contentImageView.setImageResource(R.drawable.theme2original_compressed)
+            }
+
         }
 
     }

@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/theme1Fragment"
-        android:name="com.elvitalya.drillershandbook.Theme1Fragment"
+        android:name="com.elvitalya.drillershandbook.ThemeFragment"
         android:label="fragment_theme1"
-        tools:layout="@layout/fragment_theme1" >
+        tools:layout="@layout/fragment_theme" >
         <action
             android:id="@+id/action_theme1Fragment_to_mainFragment"
             app:destination="@id/mainFragment" />
