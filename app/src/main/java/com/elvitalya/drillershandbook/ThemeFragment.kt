@@ -33,6 +33,9 @@ class ThemeFragment : Fragment() {
             2 -> {
                 binding.contentImageView.setImageResource(R.drawable.theme2original_compressed)
             }
+            3 -> {
+                binding.contentImageView.setImageResource(R.drawable.theme3_content)
+            }
 
         }
 
